@@ -26,7 +26,6 @@ function maximum_product(arr){
     var max1 = -Infinity;
     var max2 = -Infinity;
     var max3 = -Infinity;
-    var result;
 
     for(var i = 0; i < arr.length; i++){
 
@@ -41,12 +40,6 @@ function maximum_product(arr){
             max3 = arr[i];
         }
     }
-    result = max1 * max2 * max3;
 
-    // check if result bigger than 32 bit number
-    if(result > 2147483647){
-        result = 'Result bigger than 32 bit number';
-    }
-
-    return result;
+    return max1 * max2 * max3;
 }
