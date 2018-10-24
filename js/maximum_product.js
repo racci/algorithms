@@ -22,24 +22,21 @@
 */
 // I prefer to use Solution 2
 function maximum_product(arr){
-
     var max1 = -Infinity;
     var max2 = -Infinity;
     var max3 = -Infinity;
 
-    for(var i = 0; i < arr.length; i++){
-
-        if(arr[i] > max1){
+    for(var i = 0; i < arr.length; i++) {
+        if (arr[i] > max1) {
             max3 = max2;
             max2 = max1;
             max1 = arr[i];
-        }else if(arr[i] > max2){
+        } else if (arr[i] > max2) {
             max3 = max2;
             max2 = arr[i];
-        }else if(arr[i] > max3){
+        } else if (arr[i] > max3) {
             max3 = arr[i];
         }
     }
-
     return max1 * max2 * max3;
 }
