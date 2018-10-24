@@ -13,35 +13,30 @@
 
 
 function merge_two_array(arr1, arr2) {
-
     var result = [];
-
     var len1 = arr1.length;
     var len2 = arr2.length;
     var i=0;
     var j=0;
 
-    while(i < len1 && j < len2) {
-
-         if(arr1[i] <= arr2[j]){
-
+    while (i < len1 && j < len2) {
+         if (arr1[i] <= arr2[j]) {
               result.push(arr1[i]);
               i++;
-         }else{
+         } else {
               result.push(arr2[j]);
               j++;
          }
-     }
+    }
 
-     while (i < len1) {
-          result.push(arr1[i]);
-          i++;
-     }
+    while (i < len1) {
+         result.push(arr1[i]);
+         i++;
+    }
 
-     while (j < len2) {
-          result.push(arr2[j]);
-          j++;
-     }
-
-     return result;
+    while (j < len2) {
+         result.push(arr2[j]);
+         j++;
+    }
+    return result;
  };
